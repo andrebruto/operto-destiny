@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import NoResults from "./components/NoResults";
 
 class App extends Component {
   state = {
@@ -44,6 +45,8 @@ class App extends Component {
         ],
       },
     ],
+    searchResults: [],
+    noResults: false,
   };
 
   searchDestination = (e) => {
@@ -56,13 +59,30 @@ class App extends Component {
     const findCountry = this.state.countries.find(
       (country) => country.name.toLowerCase() === destinationText
     );
-    console.log("findCountry", findCountry);
+    // console.log("findCountry", findCountry);
+
+    // error handling for no results in location
+    if (typeof findCountry == "undefined") {
+      this.setState({
+        noResults: true,
+      });
+      return;
+    }
+    this.setState({ noResults: false });
 
     const nearCities = findCountry.cities;
     const withinPriceRange = nearCities.filter(
       (range) => range.price >= rangeMin && range.price <= rangeMax
     );
-    console.log("withinPriceRange", withinPriceRange);
+    // console.log("withinPriceRange", withinPriceRange);
+
+    // error handling for no results within price range
+    if (withinPriceRange.length === 0) {
+      this.setState({
+        noResults: true,
+      });
+      return;
+    }
 
     e.target.reset();
   };
@@ -95,6 +115,7 @@ class App extends Component {
             <button className="header__btn">SEARCH</button>
           </form>
         </div>
+        {!this.state.noResults ? <></> : <NoResults />}
       </div>
     );
   }
