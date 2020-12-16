@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import SearchResults from "./components/SearchResults";
 import NoResults from "./components/NoResults";
 
 class App extends Component {
@@ -75,7 +76,7 @@ class App extends Component {
       (range) => range.price >= rangeMin && range.price <= rangeMax
     );
     // console.log("withinPriceRange", withinPriceRange);
-
+    e.target.reset();
     // error handling for no results within price range
     if (withinPriceRange.length === 0) {
       this.setState({
@@ -84,7 +85,9 @@ class App extends Component {
       return;
     }
 
-    e.target.reset();
+    this.setState({
+      searchResults: withinPriceRange,
+    });
   };
 
   render() {
@@ -115,6 +118,7 @@ class App extends Component {
             <button className="header__btn">SEARCH</button>
           </form>
         </div>
+        <SearchResults locations={this.state.searchResults} />
         {!this.state.noResults ? <></> : <NoResults />}
       </div>
     );
