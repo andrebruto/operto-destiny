@@ -1,6 +1,51 @@
 import React, { Component } from "react";
 
 class App extends Component {
+  state = {
+    countries: [
+      {
+        name: "Canada",
+        cities: [
+          {
+            name: "Vancouver",
+            price: 100,
+            id: 10001,
+          },
+          {
+            name: "Montreal",
+            price: 200,
+            id: 10002,
+          },
+          {
+            name: "Toronto",
+            price: 300,
+            id: 10003,
+          },
+        ],
+      },
+      {
+        name: "Brazil",
+        cities: [
+          {
+            name: "Recife",
+            price: 100,
+            id: 10004,
+          },
+          {
+            name: "Rio de Janeiro",
+            price: 200,
+            id: 10005,
+          },
+          {
+            name: "São Paulo",
+            price: 300,
+            id: 10006,
+          },
+        ],
+      },
+    ],
+  };
+
   render() {
     return (
       <div className="App">
