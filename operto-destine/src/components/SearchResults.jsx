@@ -10,12 +10,12 @@ const SearchResults = ({ locations }) => {
     return <></>;
   }
   return (
-    <div>
-      <div>
-        <h2>Location</h2>
-        <p>Price</p>
+    <div className="searchResults">
+      <div className="searchResults__heading">
+        <h2 className="searchResults__title">Location</h2>
+        <p className="searchResults__title">Price</p>
       </div>
-      <div>{mapResults}</div>
+      {mapResults}
     </div>
   );
 };

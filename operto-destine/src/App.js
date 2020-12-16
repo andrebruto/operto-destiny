@@ -45,6 +45,166 @@ class App extends Component {
           },
         ],
       },
+      {
+        name: "Germany",
+        cities: [
+          {
+            name: "Berlin",
+            price: 100,
+            id: 10007,
+          },
+          {
+            name: "Bremen",
+            price: 200,
+            id: 10008,
+          },
+          {
+            name: "Munich",
+            price: 300,
+            id: 10009,
+          },
+        ],
+      },
+      {
+        name: "Spain",
+        cities: [
+          {
+            name: "Barcelona",
+            price: 100,
+            id: 10010,
+          },
+          {
+            name: "Madrid",
+            price: 200,
+            id: 10011,
+          },
+          {
+            name: "Seville",
+            price: 300,
+            id: 10012,
+          },
+        ],
+      },
+      {
+        name: "France",
+        cities: [
+          {
+            name: "Paris",
+            price: 100,
+            id: 10013,
+          },
+          {
+            name: "Bordeaux",
+            price: 200,
+            id: 10014,
+          },
+          {
+            name: "Lyon",
+            price: 300,
+            id: 10015,
+          },
+        ],
+      },
+      {
+        name: "Portugal",
+        cities: [
+          {
+            name: "Lisbon",
+            price: 100,
+            id: 10016,
+          },
+          {
+            name: "Porto",
+            price: 200,
+            id: 10017,
+          },
+          {
+            name: "Coimbra",
+            price: 300,
+            id: 10018,
+          },
+        ],
+      },
+      {
+        name: "Mexico",
+        cities: [
+          {
+            name: "Cancun",
+            price: 100,
+            id: 10019,
+          },
+          {
+            name: "Mexico City",
+            price: 200,
+            id: 10020,
+          },
+          {
+            name: "Guadalajara",
+            price: 300,
+            id: 10021,
+          },
+        ],
+      },
+      {
+        name: "America",
+        cities: [
+          {
+            name: "Seattle",
+            price: 100,
+            id: 10022,
+          },
+          {
+            name: "Chicago",
+            price: 200,
+            id: 10023,
+          },
+          {
+            name: "Boston",
+            price: 300,
+            id: 10024,
+          },
+        ],
+      },
+      {
+        name: "England",
+        cities: [
+          {
+            name: "London",
+            price: 100,
+            id: 10025,
+          },
+          {
+            name: "Manchester",
+            price: 200,
+            id: 10026,
+          },
+          {
+            name: "Liverpool",
+            price: 300,
+            id: 10027,
+          },
+        ],
+      },
+      {
+        name: "Japan",
+        cities: [
+          {
+            name: "Tokyo",
+            price: 100,
+            id: 10028,
+          },
+          {
+            name: "Osaka",
+            price: 200,
+            id: 10029,
+          },
+          {
+            name: "Kyoto",
+            price: 300,
+            id: 10030,
+          },
+        ],
+      },
     ],
     searchResults: [],
     noResults: false,
