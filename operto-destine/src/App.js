@@ -46,11 +46,32 @@ class App extends Component {
     ],
   };
 
+  searchDestination = (e) => {
+    e.preventDefault();
+
+    const destinationText = e.target.destinationInput.value;
+    const rangeMin = e.target.rangeMin.value;
+    const rangeMax = e.target.rangeMax.value;
+
+    const findCountry = this.state.countries.find(
+      (country) => country.name.toLowerCase() === destinationText
+    );
+    console.log("findCountry", findCountry);
+
+    const nearCities = findCountry.cities;
+    const withinPriceRange = nearCities.filter(
+      (range) => range.price >= rangeMin && range.price <= rangeMax
+    );
+    console.log("withinPriceRange", withinPriceRange);
+
+    e.target.reset();
+  };
+
   render() {
     return (
       <div className="App">
         <div className="header">
-          <form className="header_form">
+          <form className="header_form" onSubmit={this.searchDestination}>
             <input
               className="header__destination-input"
               type="search"
