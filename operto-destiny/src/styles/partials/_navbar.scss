@@ -1,0 +1,56 @@
+.navbar {
+  @include flex-row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $neutral;
+  width: 90%;
+  margin: 2rem 0 1rem 0;
+  border-radius: 50px;
+  box-shadow: 3px 3px 6px #00000034, -3px -3px 6px #ffffff58;
+  &__container {
+    @include flex-row;
+    align-items: center;
+
+    box-shadow: 3px 3px 6px #cacaca, -4px -4px 6px #ffffff;
+    padding: 0.5rem 1rem 0.5rem 0.5rem;
+    border-radius: 50px;
+    margin: 0.7rem 0.4rem 0.7rem 2rem;
+    height: 2rem;
+  }
+  &__icon {
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 50px;
+    box-shadow: 3px 3px 6px #cacaca, -3px -3px 6px #ffffff;
+    padding: 0.5rem;
+    margin-right: 1rem;
+  }
+  &__logo {
+    font-family: "Lato-Black";
+    font-size: 1.5rem;
+    display: inline-block;
+
+    background: linear-gradient(to right, $light-blue 0%, $dark-blue 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 1rem 0.5rem 1rem 0;
+  }
+  &__menu {
+    @include flex-row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  &__menu-icon {
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 50px;
+    box-shadow: 3px 3px 6px #cacaca, -3px -3px 6px #ffffff;
+    padding: 0.5rem;
+    margin-right: 3rem;
+  }
+  &__menu-item {
+    font-size: 0.78rem;
+    color: $dark-blue;
+    margin-right: 3rem;
+  }
+}
