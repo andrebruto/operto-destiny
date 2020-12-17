@@ -40,4 +40,22 @@ body {
 a {
   text-decoration: none;
 }
+
+.App {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: lightblue;
+  height: 80rem;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(245, 246, 252, 0.116)), to(rgba(175, 222, 255, 0.73))), url(../assets/images/luca-bravo-O453M2Liufs-unsplash.jpg);
+  background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.116), rgba(175, 222, 255, 0.73)), url(../assets/images/luca-bravo-O453M2Liufs-unsplash.jpg);
+  background-size: contain;
+}
 /*# sourceMappingURL=app.css.map */

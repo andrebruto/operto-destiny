@@ -18,3 +18,17 @@ body {
 a {
   text-decoration: none;
 }
+
+.App {
+  @include flex-column;
+  align-items: center;
+  background-color: lightblue;
+  height: 80rem;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(245, 246, 252, 0.116),
+      rgba(175, 222, 255, 0.73)
+    ),
+    url(../assets/images/luca-bravo-O453M2Liufs-unsplash.jpg);
+  background-size: contain;
+}
