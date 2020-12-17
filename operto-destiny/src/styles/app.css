@@ -241,6 +241,72 @@
   transition: all 900ms ease;
 }
 
+.loading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #eef1f2;
+  width: 34rem;
+  border-radius: 20px;
+  -webkit-box-shadow: 2px 2px 4px #00000034;
+          box-shadow: 2px 2px 4px #00000034;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+.loading__icon {
+  height: 5vmin;
+  pointer-events: none;
+}
+
+.loading__title {
+  font-family: "Lato-Light";
+  letter-spacing: 1rem;
+  font-size: 0.8rem;
+  color: #1d1e59;
+  margin-top: 1rem;
+  padding-left: 1rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .loading__icon {
+    -webkit-animation: App-logo-spin infinite 10s linear;
+            animation: App-logo-spin infinite 10s linear;
+  }
+}
+
+@-webkit-keyframes App-logo-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 * {
   margin: 0;
   padding: 0;

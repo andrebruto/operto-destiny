@@ -1,0 +1,38 @@
+.loading {
+  @include flex-column;
+  @include justify-align-center;
+  background-color: $neutral;
+  width: 34rem;
+  border-radius: 20px;
+  box-shadow: 2px 2px 4px #00000034;
+  margin-top: 2rem;
+  padding: 1rem;
+
+  &__icon {
+    height: 5vmin;
+    pointer-events: none;
+  }
+  &__title {
+    font-family: "Lato-Light";
+    letter-spacing: 1rem;
+    font-size: 0.8rem;
+    color: $dark-blue;
+    margin-top: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .loading__icon {
+    animation: App-logo-spin infinite 10s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
