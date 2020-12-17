@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import SearchResults from "./components/SearchResults";
 import NoResults from "./components/NoResults";
 
+// RESTARTED WORK FOR THE FINAL 2H
+
 class App extends Component {
   state = {
     countries: [
