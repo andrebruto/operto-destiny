@@ -3,6 +3,8 @@ import SearchResults from "./components/SearchResults";
 import NoResults from "./components/NoResults";
 import Loading from "./components/Loading";
 import Navbar from "./components/Navbar";
+import LocationIcon from "./assets/icons/map-marker-alt-solid.svg";
+import PriceIcon from "./assets/icons/dollar-sign-solid.svg";
 
 // RESTARTED WORK FOR THE FINAL 2H
 
@@ -315,6 +317,11 @@ class App extends Component {
         <Navbar />
         <div className="header">
           <form className="header__form" onSubmit={this.searchDestination}>
+            <img
+              className="header__location-icon"
+              src={LocationIcon}
+              alt="Location icon"
+            />
             <input
               className="header__destination-input"
               type="search"
@@ -324,6 +331,11 @@ class App extends Component {
               value={this.state.destinationInput}
             ></input>
             <div className="header__price">
+              <img
+                className="header__price-icon"
+                src={PriceIcon}
+                alt="Price icon"
+              />
               <input
                 className="header__price-input"
                 type="number"
