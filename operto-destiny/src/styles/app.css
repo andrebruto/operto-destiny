@@ -241,6 +241,40 @@
   transition: all 900ms ease;
 }
 
+.noResults {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #eef1f2;
+  width: 34rem;
+  border-radius: 20px;
+  -webkit-box-shadow: 2px 2px 4px #00000034;
+          box-shadow: 2px 2px 4px #00000034;
+  margin-top: 1rem;
+  margin-bottom: 50rem;
+}
+
+.noResults__text {
+  color: #1d1e59;
+  font-size: 1rem;
+  font-family: "Lato-Light";
+  margin: 1rem;
+  padding: 1rem 3rem;
+  border-radius: 20px;
+  -webkit-box-shadow: inset 4px 4px 6px #cacaca, inset -4px -4px 6px #fcfcfc;
+          box-shadow: inset 4px 4px 6px #cacaca, inset -4px -4px 6px #fcfcfc;
+}
+
 .loading {
   display: -webkit-box;
   display: -ms-flexbox;
