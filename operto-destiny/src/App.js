@@ -213,6 +213,9 @@ class App extends Component {
     searchResults: [],
     noResults: false,
     isLoading: false,
+    destinationInput: "",
+    rangeMinInput: "",
+    rangeMaxInput: "",
   };
 
   searchDestination = (e) => {
@@ -238,6 +241,9 @@ class App extends Component {
         this.setState({
           noResults: true,
           isLoading: false,
+          destinationInput: "",
+          rangeMinInput: "",
+          rangeMaxInput: "",
         });
       }, 3000);
       return;
@@ -256,6 +262,9 @@ class App extends Component {
         this.setState({
           noResults: true,
           isLoading: false,
+          destinationInput: "",
+          rangeMinInput: "",
+          rangeMaxInput: "",
         });
       }, 3000);
       return;
@@ -266,8 +275,38 @@ class App extends Component {
       this.setState({
         searchResults: withinPriceRange,
         isLoading: false,
+        destinationInput: "",
+        rangeMinInput: "",
+        rangeMaxInput: "",
       });
     }, 3000);
+  };
+
+  setDestinationInput = (e) => {
+    console.log("event target destination", e.target.value);
+    this.setState({
+      destinationInput: e.target.value,
+    });
+  };
+
+  setRangeMinInput = (e) => {
+    this.setState({
+      rangeMinInput: e.target.value,
+    });
+  };
+
+  setRangeMaxInput = (e) => {
+    this.setState({
+      rangeMaxInput: e.target.value,
+    });
+  };
+
+  isButtonDisabled = () => {
+    return !(
+      this.state.destinationInput &&
+      this.state.rangeMinInput &&
+      this.state.rangeMaxInput
+    );
   };
 
   render() {
@@ -302,7 +341,9 @@ class App extends Component {
                 value={this.state.rangeMaxInput}
               ></input>
             </div>
-            <button className="header__btn">SEARCH</button>
+            <button className="header__btn" disabled={this.isButtonDisabled()}>
+              SEARCH
+            </button>
           </form>
         </div>
         {this.state.isLoading === false ? (
