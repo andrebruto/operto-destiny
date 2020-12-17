@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import SearchResults from "./components/SearchResults";
 import NoResults from "./components/NoResults";
+import Loading from "./components/Loading";
+import Navbar from "./components/Navbar";
 
 // RESTARTED WORK FOR THE FINAL 2H
 
@@ -210,10 +212,16 @@ class App extends Component {
     ],
     searchResults: [],
     noResults: false,
+    isLoading: false,
   };
 
   searchDestination = (e) => {
     e.preventDefault();
+
+    this.setState({
+      isLoading: true,
+      searchResults: [],
+    });
 
     const destinationText = e.target.destinationInput.value;
     const rangeMin = e.target.rangeMin.value;
@@ -226,9 +234,12 @@ class App extends Component {
 
     // error handling for no results in location
     if (typeof findCountry == "undefined") {
-      this.setState({
-        noResults: true,
-      });
+      setTimeout(() => {
+        this.setState({
+          noResults: true,
+          isLoading: false,
+        });
+      }, 3000);
       return;
     }
     this.setState({ noResults: false });
@@ -241,46 +252,65 @@ class App extends Component {
     e.target.reset();
     // error handling for no results within price range
     if (withinPriceRange.length === 0) {
-      this.setState({
-        noResults: true,
-      });
+      setTimeout(() => {
+        this.setState({
+          noResults: true,
+          isLoading: false,
+        });
+      }, 3000);
       return;
     }
 
-    this.setState({
-      searchResults: withinPriceRange,
-    });
+    setTimeout(() => {
+      e.target.reset();
+      this.setState({
+        searchResults: withinPriceRange,
+        isLoading: false,
+      });
+    }, 3000);
   };
 
   render() {
     return (
       <div className="App">
+        <Navbar />
         <div className="header">
-          <form className="header_form" onSubmit={this.searchDestination}>
+          <form className="header__form" onSubmit={this.searchDestination}>
             <input
               className="header__destination-input"
               type="search"
               name="destinationInput"
               placeholder="add your destination"
+              onChange={this.setDestinationInput}
+              value={this.state.destinationInput}
             ></input>
-            <div>
+            <div className="header__price">
               <input
                 className="header__price-input"
                 type="number"
                 name="rangeMin"
                 placeholder="min"
+                onChange={this.setRangeMinInput}
+                value={this.state.rangeMinInput}
               ></input>
               <input
                 className="header__price-input"
                 type="number"
                 name="rangeMax"
                 placeholder="max"
+                onChange={this.setRangeMaxInput}
+                value={this.state.rangeMaxInput}
               ></input>
             </div>
             <button className="header__btn">SEARCH</button>
           </form>
         </div>
-        <SearchResults locations={this.state.searchResults} />
+        {this.state.isLoading === false ? (
+          <SearchResults locations={this.state.searchResults} />
+        ) : (
+          <Loading />
+        )}
+
         {!this.state.noResults ? <></> : <NoResults />}
       </div>
     );
