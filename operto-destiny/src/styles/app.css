@@ -61,6 +61,13 @@
   height: 2rem;
 }
 
+.navbar__container:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 900ms ease;
+  transition: all 900ms ease;
+}
+
 .navbar__icon {
   height: 1.2rem;
   width: 1.2rem;
@@ -108,10 +115,25 @@
   margin-right: 3rem;
 }
 
+.navbar__menu-icon:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 900ms ease;
+  transition: all 900ms ease;
+}
+
 .navbar__menu-item {
   font-size: 0.78rem;
   color: #1d1e59;
   margin-right: 3rem;
+}
+
+.navbar__menu-item:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 900ms ease;
+  transition: all 900ms ease;
+  border-bottom: 1px solid #06add7;
 }
 
 .header {
@@ -163,6 +185,13 @@
   padding: 0.5rem;
 }
 
+.header__location-icon:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 900ms ease;
+  transition: all 900ms ease;
+}
+
 .header__price-icon {
   height: 1.2rem;
   width: 1.2rem;
@@ -171,6 +200,13 @@
           box-shadow: 3px 3px 6px #cacaca, -3px -3px 6px #ffffff;
   padding: 0.5rem;
   margin-right: 0.7rem;
+}
+
+.header__price-icon:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 900ms ease;
+  transition: all 900ms ease;
 }
 
 .header__destination-input {
@@ -334,6 +370,13 @@
   padding: 0.5rem 2rem;
 }
 
+.searchResults__title:hover {
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
+  -webkit-transition: all 900ms ease;
+  transition: all 900ms ease;
+}
+
 .resultsItem {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -390,6 +433,13 @@
   text-transform: uppercase;
 }
 
+.resultsItem__title:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 900ms ease;
+  transition: all 900ms ease;
+}
+
 .resultsItem__price {
   margin: 1rem 1.5rem;
   -webkit-box-shadow: 3px 3px 6px #cacaca, -3px -3px 6px #ffffff;
@@ -399,6 +449,13 @@
   font-family: "Lato-Black";
   font-size: 0.9rem;
   color: #06add7;
+}
+
+.resultsItem__price:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 900ms ease;
+  transition: all 900ms ease;
 }
 
 .resultsItem__description {

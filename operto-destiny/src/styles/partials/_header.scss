@@ -22,6 +22,10 @@
     border-radius: 50px;
     box-shadow: 3px 3px 6px #cacaca, -3px -3px 6px #ffffff;
     padding: 0.5rem;
+    &:hover {
+      transform: scale(1.1);
+      transition: $transition-900;
+    }
   }
   &__price-icon {
     height: 1.2rem;
@@ -30,6 +34,10 @@
     box-shadow: 3px 3px 6px #cacaca, -3px -3px 6px #ffffff;
     padding: 0.5rem;
     margin-right: 0.7rem;
+    &:hover {
+      transform: scale(1.1);
+      transition: $transition-900;
+    }
   }
   &__destination-input {
     font-family: "Lato-Regular";

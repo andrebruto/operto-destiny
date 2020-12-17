@@ -48,6 +48,10 @@
     border-radius: 15px;
     margin: 1rem;
     padding: 0.5rem 2rem;
+    &:hover {
+      transform: scale(1.08);
+      transition: $transition-900;
+    }
   }
 }
 
@@ -79,6 +83,10 @@
     color: $medium-blue;
     letter-spacing: 0.1rem;
     text-transform: uppercase;
+    &:hover {
+      transform: scale(1.1);
+      transition: $transition-900;
+    }
   }
   &__price {
     margin: 1rem 1.5rem;
@@ -88,6 +96,10 @@
     font-family: "Lato-Black";
     font-size: 0.9rem;
     color: $light-blue;
+    &:hover {
+      transform: scale(1.1);
+      transition: $transition-900;
+    }
   }
   &__description {
     margin: 1rem 1rem;

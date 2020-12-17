@@ -16,6 +16,10 @@
     border-radius: 50px;
     margin: 0.7rem 0.4rem 0.7rem 2rem;
     height: 2rem;
+    &:hover {
+      transform: scale(1.1);
+      transition: $transition-900;
+    }
   }
   &__icon {
     height: 1.2rem;
@@ -47,10 +51,19 @@
     box-shadow: 3px 3px 6px #cacaca, -3px -3px 6px #ffffff;
     padding: 0.5rem;
     margin-right: 3rem;
+    &:hover {
+      transform: scale(1.1);
+      transition: $transition-900;
+    }
   }
   &__menu-item {
     font-size: 0.78rem;
     color: $dark-blue;
     margin-right: 3rem;
+    &:hover {
+      transform: scale(1.1);
+      transition: $transition-900;
+      border-bottom: 1px solid $light-blue;
+    }
   }
 }
